@@ -12,16 +12,24 @@
   <link rel="alternate" hreflang="x-default" href="/">
 
   <link rel="stylesheet" href="styles.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body>
+<body x-data="{ mobileMenuOpen: false }">
   <header class="header">
     <nav class="nav container">
-      <a href="/" class="logo">AI CDMX</a>
-      <div class="nav-links">
-        <a href="#eventos">Eventos</a>
-        <a href="#comunidad">Comunidad</a>
-        <a href="#redes">Redes</a>
-        <a href="/en/" class="lang-toggle">EN</a>
+      <a href="./" class="logo">AI CDMX</a>
+
+      <!-- Mobile menu button -->
+      <button class="menu-toggle" @click="mobileMenuOpen = !mobileMenuOpen" aria-label="Menu">
+        <span class="menu-icon" :class="{ 'open': mobileMenuOpen }"></span>
+      </button>
+
+      <!-- Nav links -->
+      <div class="nav-links" :class="{ 'active': mobileMenuOpen }" @click.away="mobileMenuOpen = false">
+        <a href="#eventos" @click="mobileMenuOpen = false">Eventos</a>
+        <a href="#comunidad" @click="mobileMenuOpen = false">Comunidad</a>
+        <a href="#redes" @click="mobileMenuOpen = false">Redes</a>
+        <a href="en/" class="lang-toggle">EN</a>
       </div>
     </nav>
   </header>
@@ -38,6 +46,19 @@
     <section id="eventos" class="section">
       <div class="container">
         <h2>Eventos</h2>
+
+        <!-- Luma Calendar Embed -->
+        <div class="calendar-embed">
+          <iframe
+            src="https://lu.ma/embed/calendar/cal-2gq3mjgfAclpoCp/events?lt=dark"
+            frameborder="0"
+            allowfullscreen
+            aria-hidden="false"
+            tabindex="0"
+          ></iframe>
+        </div>
+
+        <h3 class="section-subtitle">Encuentra nuestros eventos en</h3>
         <div class="card-grid">
           <a href="https://www.meetup.com/ai-cdmx" class="card" target="_blank" rel="noopener">
             <h3>Meetup</h3>

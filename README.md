@@ -29,9 +29,19 @@ AI CDMX is a community for AI enthusiasts in Mexico City. This website serves as
 
 ## Features
 
-- Event discovery (Luma, Meetup)
-- Community channels (Discord, Telegram, Signal, WhatsApp)
-- WhatsApp Community hub
+- Dark mode design with custom color palette
+- Spanish (/) and English (/en/) versions with language toggle
+- Embedded Luma calendar for upcoming events
+- Mobile responsive with hamburger menu
+- Auto UTM tracking on external links
+- Alpine.js for lightweight interactivity
+- No build tools required
+
+## Tech Stack
+
+- HTML5, CSS3, JavaScript
+- [Alpine.js](https://alpinejs.dev/) - Lightweight JS framework
+- GitHub Pages hosting
 
 ## Development
 
