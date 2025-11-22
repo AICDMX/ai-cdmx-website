@@ -12,6 +12,13 @@ AI CDMX is a community for AI enthusiasts in Mexico City. This website serves as
 - [Luma](https://luma.com/ai-cdmx)
 - [YouTube](https://www.youtube.com/@AICDMX) - Event live streams
 
+## Community Channels
+
+- [Discord](https://discord.gg/FQ7fAdnnJ5)
+- [Telegram](https://t.me/AI_CDMX)
+- [Signal](https://signal.group/#CjQKIB5gZjyHMHQvQh9IJbr8OSd6EMGpWlgO2LKDDFcrKl_dEhBUBxMqcQI5OD_NuFeFS3o2)
+- [WhatsApp](https://chat.whatsapp.com/EMPPXiTzSg57Efo1f3bysZ)
+
 ## Social Media
 
 - [X / Twitter](https://x.com/ai_cdmx)
