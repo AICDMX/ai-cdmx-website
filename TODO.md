@@ -30,11 +30,16 @@
 - [ ] Dark color scheme throughout
 
 ### Internationalization (i18n)
-- [ ] Spanish and English versions
+- [ ] Spanish as main language (/ = Spanish)
+- [ ] English version at /en/
 - [ ] Easy language toggle in UI
-- [ ] Auto-detect browser/system language
-- [ ] Separate URLs for SEO indexing (/en/, /es/ or similar)
+- [ ] Auto-detect browser/system language (redirect to /en/ if English detected)
 - [ ] Proper hreflang tags for search engines
+
+### Analytics / Tracking
+- [ ] Auto-add utm_source to external URLs (via JS)
+- [ ] Exclude list for URLs that shouldn't get utm params
+- [ ] utm_source=aicdmx_website (or similar)
 
 ### Polish
 - [ ] Mobile responsive design
