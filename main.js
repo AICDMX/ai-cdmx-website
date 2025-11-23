@@ -72,76 +72,11 @@
   }
 
   /**
-   * Inline the SVG sprite when running over the file: protocol to avoid
-   * browser security restrictions with <use href="file://...">.
-   */
-  function inlineSpriteForFileProtocol() {
-    if (window.location.protocol !== 'file:') return;
-
-    const uses = Array.from(document.querySelectorAll('use'));
-    const spriteHref = uses
-      .map((el) => el.getAttribute('href') || el.getAttribute('xlink:href'))
-      .filter((href) => href && href.includes('sprite.svg#'))[0];
-
-    if (!spriteHref) return;
-
-    const [spritePath] = spriteHref.split('#');
-
-    const fetchWithXhrFallback = () => new Promise((resolve, reject) => {
-      const xhr = new XMLHttpRequest();
-      xhr.open('GET', spritePath, true);
-      xhr.overrideMimeType('image/svg+xml');
-      xhr.onload = () => {
-        if (xhr.status >= 200 && xhr.status < 300) {
-          resolve(xhr.responseText);
-        } else if (xhr.status === 0 && xhr.responseText) {
-          // Most browsers report status 0 for successful file:// loads
-          resolve(xhr.responseText);
-        } else {
-          reject(new Error(`XHR sprite load failed with status ${xhr.status}`));
-        }
-      };
-      xhr.onerror = () => reject(new Error('XHR sprite load failed'));
-      xhr.send();
-    });
-
-    const fetchSprite = typeof fetch === 'function'
-      ? fetch(spritePath).then((response) => {
-          if (!response.ok) {
-            throw new Error(`Sprite request failed with status ${response.status}`);
-          }
-          return response.text();
-        }).catch(() => fetchWithXhrFallback())
-      : fetchWithXhrFallback();
-
-    fetchSprite
-      .then((svgText) => {
-        const holder = document.createElement('div');
-        holder.style.display = 'none';
-        holder.innerHTML = svgText;
-        document.body.insertBefore(holder, document.body.firstChild);
-
-        uses.forEach((el) => {
-          const href = el.getAttribute('href') || el.getAttribute('xlink:href');
-          if (!href || !href.startsWith(spritePath + '#')) return;
-          const id = href.split('#')[1];
-          if (!id) return;
-          el.setAttribute('href', `#${id}`);
-          el.setAttribute('xlink:href', `#${id}`);
-        });
-      })
-      .catch((error) => {
-        console.error('Failed to inline SVG sprite for local preview:', error);
-      });
-  }
-
-  /**
    * Initialize
    */
   function init() {
     addUtmToExternalLinks();
     detectLanguage();
-    inlineSpriteForFileProtocol();
   }
 
   // Run on DOM ready

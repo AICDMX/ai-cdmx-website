@@ -62,7 +62,7 @@ npm run build:sprite
 
 ## Asset Pipeline
 
-All purple icons inside `assets/svg-purple-logos/` are optimized and merged into `assets/sprite.svg` via `npm run build:sprite`. GitHub Actions calls the same script on every deploy, so just re-run it locally if you add or update icons.
+All purple icons inside `assets/svg-purple-logos/` are optimized and merged into `assets/sprite.svg` via `npm run build:sprite`. The same script also emits `assets/sprite-inline.js`, which injects the sprite into the DOM so icons keep working even when you open `index.html` directly from the filesystem (no dev server required). GitHub Actions calls the same script on every deploy, so just re-run it locally if you add or update icons.
 
 ## License
 
