@@ -11,13 +11,21 @@
   <link rel="alternate" hreflang="en" href="/en/">
   <link rel="alternate" hreflang="x-default" href="/">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png">
+
   <link rel="stylesheet" href="../styles.css">
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body x-data="{ mobileMenuOpen: false }">
   <header class="header">
     <nav class="nav container">
-      <a href="./" class="logo">AI CDMX</a>
+      <a href="./" class="logo">
+        <img src="../assets/ai cdmx profile image logo transparent 176X176.png" alt="AI CDMX" class="logo-img">
+        AI CDMX
+      </a>
 
       <!-- Mobile menu button -->
       <button class="menu-toggle" @click="mobileMenuOpen = !mobileMenuOpen" aria-label="Menu">
@@ -61,14 +69,23 @@
         <h3 class="section-subtitle">Find our events on</h3>
         <div class="card-grid">
           <a href="https://www.meetup.com/ai-cdmx" class="card" target="_blank" rel="noopener">
+            <svg class="card-icon" aria-hidden="true" focusable="false">
+              <use href="../assets/sprite.svg#meetup-svgrepo-com"></use>
+            </svg>
             <h3>Meetup</h3>
             <p>Join our in-person and virtual events.</p>
           </a>
           <a href="https://lu.ma/ai-cdmx" class="card" target="_blank" rel="noopener">
+            <svg class="card-icon" aria-hidden="true" focusable="false">
+              <use href="../assets/sprite.svg#luma"></use>
+            </svg>
             <h3>Luma</h3>
             <p>Discover and register for upcoming events.</p>
           </a>
           <a href="https://www.youtube.com/@AICDMX" class="card" target="_blank" rel="noopener">
+            <svg class="card-icon" aria-hidden="true" focusable="false">
+              <use href="../assets/sprite.svg#youtube-168-svgrepo-com"></use>
+            </svg>
             <h3>YouTube</h3>
             <p>Live streams and event recordings.</p>
           </a>
@@ -81,18 +98,30 @@
         <h2>Community</h2>
         <div class="card-grid">
           <a href="https://discord.gg/FQ7fAdnnJ5" class="card" target="_blank" rel="noopener">
+            <svg class="card-icon" aria-hidden="true" focusable="false">
+              <use href="../assets/sprite.svg#discord-svgrepo-com"></use>
+            </svg>
             <h3>Discord</h3>
             <p>Real-time chat with the community.</p>
           </a>
           <a href="https://t.me/AI_CDMX" class="card" target="_blank" rel="noopener">
+            <svg class="card-icon" aria-hidden="true" focusable="false">
+              <use href="../assets/sprite.svg#telegram-fill-svgrepo-com"></use>
+            </svg>
             <h3>Telegram</h3>
             <p>Discussion group and news.</p>
           </a>
           <a href="https://signal.group/#CjQKIB5gZjyHMHQvQh9IJbr8OSd6EMGpWlgO2LKDDFcrKl_dEhBUBxMqcQI5OD_NuFeFS3o2" class="card" target="_blank" rel="noopener">
+            <svg class="card-icon" aria-hidden="true" focusable="false">
+              <use href="../assets/sprite.svg#signal-svgrepo-com"></use>
+            </svg>
             <h3>Signal</h3>
             <p>Private and secure group.</p>
           </a>
           <a href="https://chat.whatsapp.com/EMPPXiTzSg57Efo1f3bysZ" class="card" target="_blank" rel="noopener">
+            <svg class="card-icon" aria-hidden="true" focusable="false">
+              <use href="../assets/sprite.svg#whatsapp-whats-app-svgrepo-com"></use>
+            </svg>
             <h3>WhatsApp</h3>
             <p>WhatsApp community for networking.</p>
           </a>
@@ -104,11 +133,36 @@
       <div class="container">
         <h2>Social Media</h2>
         <div class="social-links">
-          <a href="https://x.com/ai_cdmx" target="_blank" rel="noopener">X / Twitter</a>
-          <a href="https://www.instagram.com/cdmxai/" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://www.facebook.com/aicdmx" target="_blank" rel="noopener">Facebook</a>
-          <a href="https://www.linkedin.com/company/ai-cdmx" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://www.tiktok.com/@ai.cdmx" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://x.com/ai_cdmx" target="_blank" rel="noopener">
+            <svg class="social-icon" aria-hidden="true" focusable="false">
+              <use href="../assets/sprite.svg#twitter-154-svgrepo-com"></use>
+            </svg>
+            X / Twitter
+          </a>
+          <a href="https://www.instagram.com/cdmxai/" target="_blank" rel="noopener">
+            <svg class="social-icon" aria-hidden="true" focusable="false">
+              <use href="../assets/sprite.svg#instagram-167-svgrepo-com"></use>
+            </svg>
+            Instagram
+          </a>
+          <a href="https://www.facebook.com/aicdmx" target="_blank" rel="noopener">
+            <svg class="social-icon" aria-hidden="true" focusable="false">
+              <use href="../assets/sprite.svg#facebook-svgrepo-com"></use>
+            </svg>
+            Facebook
+          </a>
+          <a href="https://www.linkedin.com/company/ai-cdmx" target="_blank" rel="noopener">
+            <svg class="social-icon" aria-hidden="true" focusable="false">
+              <use href="../assets/sprite.svg#linkedin-161-svgrepo-com"></use>
+            </svg>
+            LinkedIn
+          </a>
+          <a href="https://www.tiktok.com/@ai.cdmx" target="_blank" rel="noopener">
+            <svg class="social-icon" aria-hidden="true" focusable="false">
+              <use href="../assets/sprite.svg#tiktok-svgrepo-com"></use>
+            </svg>
+            TikTok
+          </a>
         </div>
       </div>
     </section>

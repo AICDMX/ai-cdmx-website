@@ -94,9 +94,18 @@ a:hover {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--color-text);
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .logo:hover {
@@ -197,18 +206,32 @@ a:hover {
 
 /* Cards */
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--space-lg);
 }
 
 .card {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   background-color: var(--color-bg-card);
   border-radius: var(--border-radius);
   padding: var(--space-xl);
   transition: transform var(--transition), box-shadow var(--transition);
   border: 1px solid transparent;
+  flex: 0 1 280px;
+  max-width: 350px;
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  display: block;
+  flex-shrink: 0;
+  margin-bottom: var(--space-md);
 }
 
 .card:hover {
@@ -237,11 +260,21 @@ a:hover {
 }
 
 .social-links a {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
   padding: var(--space-sm) var(--space-lg);
   background-color: var(--color-bg-card);
   border-radius: var(--border-radius-sm);
   color: var(--color-text);
   transition: background-color var(--transition), color var(--transition);
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  flex-shrink: 0;
 }
 
 .social-links a:hover {
@@ -352,8 +385,9 @@ a:hover {
     padding: var(--space-2xl) 0;
   }
 
-  .card-grid {
-    grid-template-columns: 1fr;
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 
   .calendar-embed iframe {
