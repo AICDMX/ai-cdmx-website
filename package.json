@@ -1,0 +1,25 @@
+{
+  "name": "ai-cdmx-website",
+  "version": "1.0.0",
+  "description": "A lightweight HTML/JS/CSS website for the AI CDMX community.",
+  "main": "main.js",
+  "scripts": {
+    "build:sprite": "node scripts/build-sprite.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AICDMX/ai-cdmx-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/AICDMX/ai-cdmx-website/issues"
+  },
+  "homepage": "https://github.com/AICDMX/ai-cdmx-website#readme",
+  "devDependencies": {
+    "svgstore": "^3.0.1",
+    "svgo": "^3.0.2"
+  }
+}

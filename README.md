@@ -45,14 +45,24 @@ AI CDMX is a community for AI enthusiasts in Mexico City. This website serves as
 
 ## Development
 
-This is a static site hosted on GitHub Pages. No build tools required.
+This is a static site hosted on GitHub Pages. No build tools required for editing content, but we do generate an SVG sprite before deploying so icons only load once.
 
 ```
 # Clone the repo
 git clone https://github.com/AICDMX/ai-cdmx-website.git
 
+# Install sprite builder deps once
+npm install
+
+# Generate the sprite (runs in CI as well)
+npm run build:sprite
+
 # Open index.html in your browser
 ```
+
+## Asset Pipeline
+
+All purple icons inside `assets/svg-purple-logos/` are optimized and merged into `assets/sprite.svg` via `npm run build:sprite`. GitHub Actions calls the same script on every deploy, so just re-run it locally if you add or update icons.
 
 ## License
 
