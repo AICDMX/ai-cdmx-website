@@ -17,10 +17,10 @@
   <link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png">
 
   <link rel="stylesheet" href="../styles.css">
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"></script>
 </head>
-<body x-data="{ mobileMenuOpen: false }">
-  <header class="header">
+<body>
+  <header class="header" x-data="{ open: false }">
     <nav class="nav container">
       <a href="./" class="logo">
         <img src="../assets/ai cdmx profile image logo transparent 176X176.png" alt="AI CDMX" class="logo-img">
@@ -28,15 +28,15 @@
       </a>
 
       <!-- Mobile menu button -->
-      <button class="menu-toggle" @click="mobileMenuOpen = !mobileMenuOpen" aria-label="Menu">
-        <span class="menu-icon" :class="{ 'open': mobileMenuOpen }"></span>
+      <button class="menu-toggle" @click.stop="open = !open" aria-label="Menu">
+        <span class="menu-icon" :class="open && 'open'"></span>
       </button>
 
       <!-- Nav links -->
-      <div class="nav-links" :class="{ 'active': mobileMenuOpen }" @click.away="mobileMenuOpen = false">
-        <a href="#events" @click="mobileMenuOpen = false">Events</a>
-        <a href="#community" @click="mobileMenuOpen = false">Community</a>
-        <a href="#social" @click="mobileMenuOpen = false">Social</a>
+      <div class="nav-links" :class="open && 'active'" @click.outside="open = false">
+        <a href="#events" @click="open = false">Events</a>
+        <a href="#community" @click="open = false">Community</a>
+        <a href="#social" @click="open = false">Social</a>
         <a href="../" class="lang-toggle">ES</a>
       </div>
     </nav>
@@ -54,17 +54,6 @@
     <section id="events" class="section">
       <div class="container">
         <h2>Events</h2>
-
-        <!-- Luma Calendar Embed -->
-        <div class="calendar-embed">
-          <iframe
-            src="https://lu.ma/embed/calendar/cal-2gq3mjgfAclpoCp/events?lt=dark"
-            frameborder="0"
-            allowfullscreen
-            aria-hidden="false"
-            tabindex="0"
-          ></iframe>
-        </div>
 
         <h3 class="section-subtitle">Find our events on</h3>
         <div class="card-grid">
