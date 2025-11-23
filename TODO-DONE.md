@@ -51,3 +51,22 @@
 - [x] Mobile responsive design
 - [x] Hamburger menu for mobile navigation
 - [x] Touch-friendly tap targets
+
+## Icons
+**All icons now using SVG (assets/svg-purple-logos/):**
+- [x] X / Twitter
+- [x] Instagram
+- [x] Facebook
+- [x] LinkedIn
+- [x] TikTok
+- [x] Discord
+- [x] Telegram
+- [x] Signal
+- [x] WhatsApp
+- [x] Meetup
+- [x] Luma
+- [x] YouTube
+
+## Polish
+- [x] Add favicon (created from purple 750x750 logo)
+- [x] Configure GitHub Pages deployment
