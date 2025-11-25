@@ -16,7 +16,416 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 
-  <link rel="stylesheet" href="styles.css">
+  <style>
+/* AI CDMX Design System */
+
+:root {
+  /* Colors */
+  --color-electric-blue: #00aeff;
+  --color-soft-green: #88c778;
+  --color-hot-pink: #e748c7;
+  --color-deep-purple: #440264;
+  --color-midnight: #210039;
+
+  /* Semantic */
+  --color-bg: var(--color-midnight);
+  --color-bg-card: var(--color-deep-purple);
+  --color-primary: var(--color-electric-blue);
+  --color-secondary: var(--color-hot-pink);
+  --color-accent: var(--color-soft-green);
+  --color-text: #ffffff;
+  --color-text-muted: #b0b0b0;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  /* Typography */
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+
+  /* Layout */
+  --max-width: 1200px;
+  --border-radius: 12px;
+  --border-radius-sm: 8px;
+
+  /* Transitions */
+  --transition: 200ms ease;
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+/* Layout */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(33, 0, 57, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-deep-purple);
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.logo:hover {
+  color: var(--color-primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--color-primary);
+}
+
+.lang-toggle {
+  padding: var(--space-xs) var(--space-md);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-primary) !important;
+  font-size: 0.875rem;
+}
+
+.lang-toggle:hover {
+  background-color: var(--color-primary);
+  color: var(--color-bg) !important;
+}
+
+/* Hero */
+.hero {
+  padding: var(--space-3xl) 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Sections */
+.section {
+  padding: var(--space-3xl) 0;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: var(--space-xl);
+  text-align: center;
+}
+
+/* Calendar Embed */
+.calendar-embed {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto var(--space-xl);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  border: 1px solid var(--color-deep-purple);
+}
+
+.calendar-embed iframe {
+  width: 100%;
+  height: 500px;
+  display: block;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  font-weight: 400;
+}
+
+/* Cards */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-lg);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--color-bg-card);
+  border-radius: var(--border-radius);
+  padding: var(--space-xl);
+  transition: transform var(--transition), box-shadow var(--transition);
+  border: 1px solid transparent;
+  flex: 0 1 280px;
+  max-width: 350px;
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  display: block;
+  flex-shrink: 0;
+  margin-bottom: var(--space-md);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 32px rgba(0, 174, 255, 0.15);
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-sm);
+  color: var(--color-text);
+}
+
+.card p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  background-color: var(--color-bg-card);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-text);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.social-links a:hover {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+}
+
+/* Footer */
+.footer {
+  padding: var(--space-xl) 0;
+  text-align: center;
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-deep-purple);
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-sm);
+  z-index: 101;
+}
+
+.menu-icon {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-text);
+  position: relative;
+  transition: background-color var(--transition);
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-text);
+  left: 0;
+  transition: transform var(--transition);
+}
+
+.menu-icon::before {
+  top: -7px;
+}
+
+.menu-icon::after {
+  top: 7px;
+}
+
+/* Hamburger to X animation */
+.menu-icon.open {
+  background-color: transparent;
+}
+
+.menu-icon.open::before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-icon.open::after {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    background: #210039;
+    background: var(--color-bg);
+    padding: var(--space-xl);
+    gap: var(--space-lg);
+    z-index: 99;
+    width: 100%;
+    height: calc(100vh - 64px);
+    height: calc(100dvh - 64px);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Alpine.js cloak - hide elements until Alpine loads */
+  [x-cloak] {
+    display: none !important;
+  }
+
+  .nav-links a:not(.lang-toggle) {
+    font-size: 1.25rem;
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--color-deep-purple);
+  }
+
+  .nav-links .lang-toggle {
+    margin-top: var(--space-md);
+    padding: var(--space-sm) var(--space-lg);
+    font-size: 0.875rem;
+    align-self: center;
+  }
+
+  .hero {
+    padding: var(--space-2xl) 0;
+  }
+
+  .section {
+    padding: var(--space-2xl) 0;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .calendar-embed iframe {
+    height: 400px;
+  }
+}
+  </style>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"></script>
 </head>
 <body>
