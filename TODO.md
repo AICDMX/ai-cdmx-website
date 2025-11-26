@@ -21,7 +21,7 @@
 - [ ] Unlisted Sponsor Prospectus page (no public links, no indexing)
 - [ ] Accessibility & Inclusion page detailing venue accessibility and support services
 - [ ] About AI CDMX. We started in 2023. We host monthly events and workshops. Our goal is AI for all and stories about ai. We want people to think how can i use ai today. 
-
+- [ ] add github to the front page and the logo as well to the leadership page.
 ### Event Feed System
 - [ ] Design a user-submittable event feed stored in simple JSON so it is easy to maintain
 - [ ] Each event item must include start/end datetime, image reference, description, and tags
