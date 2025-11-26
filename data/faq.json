@@ -38,10 +38,10 @@
   {
     "id": "register-event",
     "question": "¿Cómo me registro para el próximo evento?",
-    "answer": "Publica nuestros eventos en Meetup y Luma. Consulta la página principal para ver los próximos eventos y registrarte.",
+    "answer": "Publicamos nuestros eventos en <a href=\"https://www.meetup.com/ai-cdmx\" target=\"_blank\" rel=\"noopener\">Meetup</a> y <a href=\"https://lu.ma/ai-cdmx\" target=\"_blank\" rel=\"noopener\">Luma</a>. ¡Regístrate ahí para no perderte nada!",
     "link": {
       "text": "Ver próximos eventos",
-      "url": "/#events"
+      "url": "/#eventos"
     }
   },
   {
@@ -57,7 +57,7 @@
   {
     "id": "language",
     "question": "¿Los eventos son en español o inglés?",
-    "answer": "La mayoría de nuestros eventos son en español, aunque ocasionalmente tenemos charlas en inglés o bilingües dependiendo del speaker. Siempre especificamos el idioma en la descripción del evento."
+    "answer": "La mayoría de nuestros eventos son en español, aunque ocasionalmente tenemos charlas en inglés o bilingües dependiendo del speaker. Siempre especificamos el idioma en la descripción del evento. Frecuentemente ofrecemos subtítulos en el idioma alternativo."
   },
   {
     "id": "design",

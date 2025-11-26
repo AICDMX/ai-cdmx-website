@@ -10,7 +10,7 @@
       {{ range .Site.Data.faq }}
       <div class="card card--faq">
         <h2 data-rosey="faq-q-{{ .id }}">{{ .question }}</h2>
-        <p data-rosey="faq-a-{{ .id }}">{{ .answer }}</p>
+        <p data-rosey="faq-a-{{ .id }}">{{ .answer | safeHTML }}</p>
         {{ if .link }}
         <a class="card-link"
            href="{{ .link.url }}"
