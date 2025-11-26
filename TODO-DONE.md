@@ -41,6 +41,13 @@
 - [x] English version at /en/
 - [x] Easy language toggle in UI
 - [x] Proper hreflang tags for search engines
+- [x] Auto-detect browser/system language (redirect to /en/ if English detected)
+- [x] Client-side language switching without page reload (pushState + DOM swap)
+
+## New Pages
+- [x] Add a "Popular Videos" page highlighting YouTube live streams of previous events
+- [x] Launch a Volunteering page explaining roles and how to help
+- [x] Create a Speaker Guide page outlining requirements, expectations, and signup process
 
 ## Analytics / Tracking
 - [x] Auto-add utm_source to external URLs (via JS)
@@ -70,3 +77,4 @@
 ## Polish
 - [x] Add favicon (created from purple 750x750 logo)
 - [x] Configure GitHub Pages deployment
+- [x] Acquire and configure a .com domain for the site (pointing to GitHub Pages)
