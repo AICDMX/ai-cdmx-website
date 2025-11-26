@@ -19,6 +19,9 @@ Thumbs.db
 # Dependencies (if any added later)
 node_modules/
 
-# Build output (if any added later)
+# Build output
 dist/
 build/
+public/
+rosey/base.json
+rosey/base.urls.json
