@@ -1,0 +1,13 @@
+baseURL = 'https://hablandodeia.com/'
+languageCode = 'es-MX'
+title = 'AI CDMX - Comunidad de Inteligencia Artificial en Ciudad de México'
+
+[params]
+  description = 'Comunidad de entusiastas de la inteligencia artificial en Ciudad de México. Eventos, networking y recursos.'
+
+[outputs]
+  home = ['HTML', 'SITEMAP']
+  page = ['HTML']
+
+[markup.goldmark.renderer]
+  unsafe = true

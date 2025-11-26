@@ -1,0 +1,4 @@
+source = "public"
+dest = "dist"
+version = 2
+default-language = "es"
