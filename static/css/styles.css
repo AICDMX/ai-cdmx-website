@@ -371,6 +371,116 @@ h1 {
   }
 }
 
+/* Leadership Page */
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-sm);
+  display: inline-block;
+}
+
+.leadership-page h1 {
+  margin-bottom: var(--space-md);
+}
+
+.leader-card {
+  margin-top: var(--space-2xl);
+  background-color: var(--color-bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--border-radius);
+  padding: var(--space-2xl);
+  display: grid;
+  grid-template-columns: minmax(200px, 280px) 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+.leader-photo-frame {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--border-radius);
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-md);
+  background: linear-gradient(135deg, rgba(68, 2, 100, 0.4), rgba(0, 174, 255, 0.15));
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.leader-details h2 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  margin-bottom: var(--space-sm);
+}
+
+.leader-label {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+  display: inline-block;
+}
+
+.leader-role {
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+}
+
+.leader-bio {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
+}
+
+.leader-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.leader-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-text);
+  font-weight: 600;
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+.leader-link:hover {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .leader-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .leader-photo-frame {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .leader-details {
+    text-align: center;
+  }
+
+  .leader-links {
+    justify-content: center;
+  }
+}
+
 /* Social Links */
 .social-links {
   display: flex;
