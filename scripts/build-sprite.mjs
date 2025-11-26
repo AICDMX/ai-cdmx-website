@@ -21,7 +21,12 @@ if (!files.length) {
   process.exit(1);
 }
 
-const sprite = svgstore({ inline: true });
+const sprite = svgstore({
+  inline: true,
+  symbolAttrs: {
+    fill: '#210039',
+  },
+});
 
 files.forEach((file) => {
   const raw = readFileSync(path.join(logosDir, file), 'utf8');
