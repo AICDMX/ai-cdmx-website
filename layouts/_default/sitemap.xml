@@ -1,0 +1,22 @@
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {{- $defaultChangeFreq := .Site.Params.sitemap_changefreq | default "weekly" }}
+  {{- $defaultPriority := .Site.Params.sitemap_priority | default "0.5" }}
+  {{- $pages := where .Site.RegularPages ".Params.sitemap_exclude" "ne" true }}
+  {{- if and .Site.Home (ne .Site.Home.Params.sitemap_exclude true) }}
+  <url>
+    <loc>{{ .Site.Home.Permalink }}</loc>
+    <lastmod>{{ .Site.Home.Lastmod.Format "2006-01-02T15:04:05-07:00" }}</lastmod>
+    <changefreq>{{ with .Site.Home.Params.changefreq }}{{ . }}{{ else }}{{ $defaultChangeFreq }}{{ end }}</changefreq>
+    <priority>{{ with .Site.Home.Params.priority }}{{ printf "%.1f" . }}{{ else }}{{ $defaultPriority }}{{ end }}</priority>
+  </url>
+  {{- end }}
+  {{- range $pages }}
+  <url>
+    <loc>{{ .Permalink }}</loc>
+    <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}</lastmod>
+    <changefreq>{{ with .Params.changefreq }}{{ . }}{{ else }}{{ $defaultChangeFreq }}{{ end }}</changefreq>
+    <priority>{{ with .Params.priority }}{{ printf "%.1f" . }}{{ else }}{{ $defaultPriority }}{{ end }}</priority>
+  </url>
+  {{- end }}
+</urlset>

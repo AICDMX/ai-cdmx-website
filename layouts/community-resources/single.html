@@ -1,0 +1,416 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container" style="max-width: 1200px;">
+    <h1 class="page-title" data-rosey="community-resources-title">Directorio de Recursos de la Comunidad</h1>
+    <p class="section-subtitle" data-rosey="community-resources-intro">Recursos curados sobre IA, machine learning y tecnologías relacionadas, recomendados por la comunidad de AI CDMX.</p>
+
+    <!-- Controls -->
+    <div class="resources-controls">
+      <div class="sort-controls">
+        <label data-rosey="community-resources-sort-label">Ordenar:</label>
+        <button id="sort-newest" class="sort-btn active" data-rosey="community-resources-sort-newest">Más recientes</button>
+        <button id="sort-oldest" class="sort-btn" data-rosey="community-resources-sort-oldest">Más antiguos</button>
+      </div>
+
+      <div class="filter-controls">
+        <label data-rosey="community-resources-filter-label">Filtrar por etiqueta:</label>
+        <div id="tag-filters" class="tag-filters"></div>
+        <button id="clear-filter" class="clear-filter-btn" style="display: none;" data-rosey="community-resources-clear-filter">Limpiar filtro</button>
+      </div>
+    </div>
+
+    <!-- Resources Grid -->
+    <div id="resources-container" class="resources-grid">
+      <!-- Resources will be dynamically inserted here -->
+    </div>
+
+    <div id="no-results" class="no-results" style="display: none;">
+      <p data-rosey="community-resources-no-results">No se encontraron recursos con los filtros seleccionados.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+.page-title {
+  text-align: center;
+  font-size: clamp(2rem, 6vw, 3rem);
+  margin-bottom: var(--space-md);
+  color: var(--color-text);
+}
+
+.resources-controls {
+  background: var(--color-bg-card);
+  padding: var(--space-lg);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--space-2xl);
+  border: 1px solid var(--color-deep-purple);
+}
+
+.sort-controls,
+.filter-controls {
+  margin-bottom: var(--space-lg);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.filter-controls {
+  margin-bottom: 0;
+}
+
+.sort-controls label,
+.filter-controls label {
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.sort-btn,
+.tag-filter-btn {
+  background: transparent;
+  border: 1px solid var(--color-deep-purple);
+  color: var(--color-text-muted);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.sort-btn:hover,
+.tag-filter-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.sort-btn.active,
+.tag-filter-btn.active {
+  background: var(--color-primary);
+  color: var(--color-bg);
+  border-color: var(--color-primary);
+}
+
+.tag-filters {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.tag-filter-btn {
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.clear-filter-btn {
+  background: var(--color-secondary);
+  color: var(--color-bg);
+  border: none;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.clear-filter-btn:hover {
+  opacity: 0.8;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.resource-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-deep-purple);
+  border-radius: var(--border-radius);
+  padding: var(--space-lg);
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.resource-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 32px rgba(0, 174, 255, 0.15);
+}
+
+.resource-card h3 {
+  margin: 0 0 var(--space-md) 0;
+  font-size: 1.25rem;
+}
+
+.resource-card h3 a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.resource-card h3 a:hover {
+  color: var(--color-primary);
+}
+
+.resource-description {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+  flex-grow: 1;
+  line-height: 1.5;
+}
+
+.resource-meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-deep-purple);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.resource-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.resource-tag {
+  background: var(--color-midnight);
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.resource-date {
+  font-style: italic;
+}
+
+.resource-submitted-by {
+  color: var(--color-text-muted);
+}
+
+.resource-link-btn {
+  background: var(--color-primary);
+  color: var(--color-bg);
+  border: none;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--border-radius-sm);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: var(--space-md);
+  transition: all var(--transition);
+  text-align: center;
+}
+
+.resource-link-btn:hover {
+  background: var(--color-secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(231, 72, 199, 0.3);
+}
+
+.no-results {
+  text-align: center;
+  padding: var(--space-2xl);
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sort-controls,
+  .filter-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+</style>
+
+<script>
+// Load resources data
+const resourcesData = JSON.parse({{ .Site.Data.resources | jsonify }});
+
+let currentSort = 'newest';
+let currentFilter = null;
+
+// Initialize the page
+document.addEventListener('DOMContentLoaded', () => {
+  initializeTagFilters();
+  displayResources();
+  setupEventListeners();
+});
+
+// Initialize tag filter buttons
+function initializeTagFilters() {
+  const allTags = new Set();
+  resourcesData.forEach(resource => {
+    resource.tags.forEach(tag => allTags.add(tag));
+  });
+
+  const tagFiltersContainer = document.getElementById('tag-filters');
+  const sortedTags = Array.from(allTags).sort();
+
+  sortedTags.forEach(tag => {
+    const btn = document.createElement('button');
+    btn.className = 'tag-filter-btn';
+    btn.textContent = tag;
+    btn.dataset.tag = tag;
+    btn.addEventListener('click', () => filterByTag(tag));
+    tagFiltersContainer.appendChild(btn);
+  });
+}
+
+// Setup event listeners
+function setupEventListeners() {
+  document.getElementById('sort-newest').addEventListener('click', () => sortResources('newest'));
+  document.getElementById('sort-oldest').addEventListener('click', () => sortResources('oldest'));
+  document.getElementById('clear-filter').addEventListener('click', clearFilter);
+}
+
+// Sort resources
+function sortResources(sortType) {
+  currentSort = sortType;
+
+  // Update button states
+  document.querySelectorAll('.sort-btn').forEach(btn => btn.classList.remove('active'));
+  document.getElementById(`sort-${sortType}`).classList.add('active');
+
+  displayResources();
+}
+
+// Filter by tag
+function filterByTag(tag) {
+  // Toggle filter
+  if (currentFilter === tag) {
+    currentFilter = null;
+    document.querySelectorAll('.tag-filter-btn').forEach(btn => btn.classList.remove('active'));
+    document.getElementById('clear-filter').style.display = 'none';
+  } else {
+    currentFilter = tag;
+    document.querySelectorAll('.tag-filter-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.tag === tag);
+    });
+    document.getElementById('clear-filter').style.display = 'inline-block';
+  }
+
+  displayResources();
+}
+
+// Clear filter
+function clearFilter() {
+  currentFilter = null;
+  document.querySelectorAll('.tag-filter-btn').forEach(btn => btn.classList.remove('active'));
+  document.getElementById('clear-filter').style.display = 'none';
+  displayResources();
+}
+
+// Display resources
+function displayResources() {
+  const container = document.getElementById('resources-container');
+  const noResults = document.getElementById('no-results');
+
+  // Filter resources
+  let filteredResources = currentFilter
+    ? resourcesData.filter(r => r.tags.includes(currentFilter))
+    : [...resourcesData];
+
+  // Sort resources
+  filteredResources.sort((a, b) => {
+    const dateA = new Date(a.dateAdded);
+    const dateB = new Date(b.dateAdded);
+    return currentSort === 'newest' ? dateB - dateA : dateA - dateB;
+  });
+
+  // Clear container
+  container.innerHTML = '';
+
+  // Show/hide no results message
+  if (filteredResources.length === 0) {
+    noResults.style.display = 'block';
+    return;
+  } else {
+    noResults.style.display = 'none';
+  }
+
+  // Render resources
+  filteredResources.forEach(resource => {
+    const card = createResourceCard(resource);
+    container.appendChild(card);
+  });
+}
+
+// Create resource card
+function createResourceCard(resource) {
+  const card = document.createElement('article');
+  card.className = 'resource-card';
+
+  const title = document.createElement('h3');
+  const link = document.createElement('a');
+  link.href = resource.url;
+  link.target = '_blank';
+  link.rel = 'noopener';
+  link.textContent = resource.title;
+  title.appendChild(link);
+
+  const description = document.createElement('p');
+  description.className = 'resource-description';
+  description.textContent = resource.description;
+
+  const meta = document.createElement('div');
+  meta.className = 'resource-meta';
+
+  const tags = document.createElement('div');
+  tags.className = 'resource-tags';
+  resource.tags.forEach(tag => {
+    const tagSpan = document.createElement('span');
+    tagSpan.className = 'resource-tag';
+    tagSpan.textContent = tag;
+    tags.appendChild(tagSpan);
+  });
+
+  const date = document.createElement('div');
+  date.className = 'resource-date';
+  date.textContent = `Agregado: ${formatDate(resource.dateAdded)}`;
+
+  meta.appendChild(tags);
+  meta.appendChild(date);
+
+  if (resource.submittedBy) {
+    const submittedBy = document.createElement('div');
+    submittedBy.className = 'resource-submitted-by';
+    submittedBy.textContent = `Enviado por: ${resource.submittedBy}`;
+    meta.appendChild(submittedBy);
+  }
+
+  const linkBtn = document.createElement('a');
+  linkBtn.className = 'resource-link-btn';
+  linkBtn.href = resource.url;
+  linkBtn.target = '_blank';
+  linkBtn.rel = 'noopener';
+  linkBtn.setAttribute('data-rosey', 'community-resources-view-btn');
+  linkBtn.textContent = 'Ver recurso →';
+
+  card.appendChild(title);
+  card.appendChild(description);
+  card.appendChild(meta);
+  card.appendChild(linkBtn);
+
+  return card;
+}
+
+// Format date
+function formatDate(dateString) {
+  const date = new Date(dateString);
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  return date.toLocaleDateString('es-MX', options);
+}
+</script>
+
+{{ end }}

@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{ $siteTitle := .Site.Title }}
+{{ $computedTitle := $siteTitle }}
+{{ with .Title }}
+  {{ $computedTitle = printf "%s | %s" . $siteTitle }}
+{{ end }}
+{{ $metaDescription := .Params.description | default .Site.Params.description }}
+{{ $pageKey := "home" }}
+{{ with .RelPermalink }}
+  {{ $cleanPath := trim . "/" }}
+  {{ if $cleanPath }}
+    {{ $pageKey = replace $cleanPath "/" "-" }}
+  {{ end }}
+{{ end }}
+{{ $titleKey := printf "meta-%s-title" $pageKey }}
+{{ $descriptionKey := printf "meta-%s-description" $pageKey }}
+<title data-rosey="{{ $titleKey }}">{{ $computedTitle }}</title>
+<meta name="description" data-meta-key="{{ $descriptionKey }}" content="{{ $metaDescription }}">
+
+<!-- Alternate language -->
+<link rel="alternate" hreflang="en" href="https://hablandodeia.com/en/">
+<link rel="alternate" hreflang="es" href="https://hablandodeia.com/">
+<link rel="alternate" hreflang="x-default" href="https://hablandodeia.com/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}">
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
+<link rel="icon" type="image/png" sizes="192x192" href="{{ "icon-192.png" | relURL }}">
+
+<link rel="stylesheet" href="{{ "css/styles.css" | relURL }}">
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"></script>

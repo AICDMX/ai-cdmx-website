@@ -1,0 +1,67 @@
+[
+  {
+    "id": "volunteer",
+    "question": "¿Puedo ser voluntario?",
+    "answer": "¡Sí! Buscamos personas que quieran apoyar en diversas áreas: organización de eventos, redes sociales, moderación de comunidad y más.",
+    "link": {
+      "text": "Ver oportunidades de voluntariado",
+      "url": "/voluntariado"
+    }
+  },
+  {
+    "id": "speak",
+    "question": "¿Puedo dar una charla?",
+    "answer": "¡Claro! Si tienes experiencia en IA y quieres compartirla con la comunidad, completa nuestro formulario para speakers.",
+    "link": {
+      "text": "Formulario para speakers",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeEwQ1_yicM1rglXNVd-139ghypm75CDn7V-5nEWRihWqjr6g/viewform?usp=dialog"
+    }
+  },
+  {
+    "id": "sponsor",
+    "question": "¿Puedo patrocinar eventos?",
+    "answer": "Buscamos empresas y organizaciones que quieran apoyar a la comunidad. Ofrecemos diferentes paquetes de patrocinio.",
+    "link": {
+      "text": "Más información sobre patrocinios",
+      "url": "/voluntariado#patrocinadores"
+    }
+  },
+  {
+    "id": "videos",
+    "question": "¿Dónde puedo ver videos de eventos anteriores?",
+    "answer": "Grabamos nuestros eventos y los publicamos en nuestro canal de YouTube. También tenemos una selección de videos destacados.",
+    "link": {
+      "text": "Ver videos populares",
+      "url": "/popular-videos"
+    }
+  },
+  {
+    "id": "register-event",
+    "question": "¿Cómo me registro para el próximo evento?",
+    "answer": "Publica nuestros eventos en Meetup y Luma. Consulta la página principal para ver los próximos eventos y registrarte.",
+    "link": {
+      "text": "Ver próximos eventos",
+      "url": "/#events"
+    }
+  },
+  {
+    "id": "registration-required",
+    "question": "¿Tengo que registrarme para asistir?",
+    "answer": "Sí, pedimos que te registres en Meetup o Luma para tener un mejor control del aforo y poder planear mejor la logística del evento."
+  },
+  {
+    "id": "free-events",
+    "question": "¿Los eventos son gratuitos?",
+    "answer": "Sí, todos nuestros eventos son completamente gratuitos. Queremos que el conocimiento sobre IA sea accesible para toda la comunidad."
+  },
+  {
+    "id": "language",
+    "question": "¿Los eventos son en español o inglés?",
+    "answer": "La mayoría de nuestros eventos son en español, aunque ocasionalmente tenemos charlas en inglés o bilingües dependiendo del speaker. Siempre especificamos el idioma en la descripción del evento."
+  },
+  {
+    "id": "design",
+    "question": "¿Cuál es la filosofía de diseño del sitio web de AI CDMX?",
+    "answer": "Nuestra filosofía es 'Moderno, limpio, minimalista'. Priorizamos un modo oscuro, tiempos de carga rápidos y cero sobrecarga ('bloat'). El diseño es responsivo (mobile-first), usa fuentes nativas del sistema para velocidad y tiene una paleta de colores basada en morados y azules eléctricos."
+  }
+]

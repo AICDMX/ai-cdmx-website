@@ -1,0 +1,206 @@
+[
+  {
+    "title": "Fast.ai Practical Deep Learning Course",
+    "description": "Curso gratuito que cubre deep learning práctico para programadores con proyectos hands-on y enfoque top-down.",
+    "url": "https://course.fast.ai/",
+    "language": "english",
+    "tags": ["curso", "código"],
+    "dateAdded": "2025-01-15",
+    "credits": [
+      {
+        "name": "María González",
+        "url": "https://twitter.com/mariagonzalez"
+      }
+    ]
+  },
+  {
+    "title": "Hugging Face Transformers",
+    "description": "Biblioteca de Python para modelos de lenguaje preentrenados y herramientas para NLP de última generación.",
+    "url": "https://huggingface.co/docs/transformers/",
+    "language": "english",
+    "tags": ["código", "documentación", "herramienta"],
+    "dateAdded": "2025-01-10",
+    "credits": [
+      {
+        "name": "Carlos Ruiz",
+        "url": "https://github.com/carlosruiz"
+      }
+    ]
+  },
+  {
+    "title": "Papers with Code",
+    "description": "Repositorio de papers de investigación en ML con código de implementación y benchmarks.",
+    "url": "https://paperswithcode.com/",
+    "language": "english",
+    "tags": ["investigación", "código"],
+    "dateAdded": "2025-01-08"
+  },
+  {
+    "title": "OpenAI Cookbook",
+    "description": "Guías y ejemplos prácticos para usar las APIs de OpenAI en diversos casos de uso.",
+    "url": "https://cookbook.openai.com/",
+    "language": "english",
+    "tags": ["documentación", "código"],
+    "dateAdded": "2025-01-20",
+    "credits": [
+      {
+        "name": "Ana Martínez",
+        "url": "https://linkedin.com/in/anamartinez"
+      },
+      {
+        "name": "Luis Ramírez",
+        "url": "https://twitter.com/luisramirez"
+      }
+    ]
+  },
+  {
+    "title": "Attention Is All You Need",
+    "description": "Paper fundamental que introdujo la arquitectura Transformer, base de modelos modernos como GPT y BERT.",
+    "url": "https://arxiv.org/abs/1706.03762",
+    "language": "english",
+    "tags": ["investigación"],
+    "dateAdded": "2024-12-28"
+  },
+  {
+    "title": "Kaggle Datasets",
+    "description": "Plataforma con miles de datasets públicos para entrenar modelos de machine learning.",
+    "url": "https://www.kaggle.com/datasets",
+    "language": "english",
+    "tags": ["dataset"],
+    "dateAdded": "2025-01-05",
+    "credits": [
+      {
+        "name": "Luis Hernández",
+        "url": "https://github.com/luishernandez"
+      }
+    ]
+  },
+  {
+    "title": "Andrej Karpathy - Intro to Large Language Models",
+    "description": "Video introductorio sobre LLMs explicando arquitectura, entrenamiento y aplicaciones de manera accesible.",
+    "url": "https://www.youtube.com/watch?v=zjkBMFhNj_g",
+    "language": "english",
+    "tags": ["video"],
+    "dateAdded": "2024-12-15",
+    "credits": [
+      {
+        "name": "Roberto Silva",
+        "url": "https://twitter.com/robertosilva"
+      }
+    ]
+  },
+  {
+    "title": "Prompt Engineering Guide",
+    "description": "Guía completa sobre técnicas de prompt engineering para optimizar resultados con LLMs.",
+    "url": "https://www.promptingguide.ai/",
+    "language": "español",
+    "tags": ["documentación", "artículo"],
+    "dateAdded": "2025-01-12"
+  },
+  {
+    "title": "LangChain Documentation",
+    "description": "Framework para desarrollar aplicaciones con modelos de lenguaje, facilitando integración de LLMs.",
+    "url": "https://python.langchain.com/",
+    "language": "english",
+    "tags": ["código", "documentación", "herramienta"],
+    "dateAdded": "2025-01-18",
+    "credits": [
+      {
+        "name": "Sofía Jiménez",
+        "url": "https://github.com/sofiajimenez"
+      }
+    ]
+  },
+  {
+    "title": "The Illustrated Transformer",
+    "description": "Artículo visual que explica paso a paso cómo funcionan los Transformers de manera intuitiva.",
+    "url": "http://jalammar.github.io/illustrated-transformer/",
+    "language": "english",
+    "tags": ["artículo"],
+    "dateAdded": "2024-12-20",
+    "credits": [
+      {
+        "name": "Diego Torres",
+        "url": "https://twitter.com/diegotorres"
+      }
+    ]
+  },
+  {
+    "title": "Ollama",
+    "description": "Herramienta para ejecutar LLMs localmente en tu computadora de forma sencilla.",
+    "url": "https://ollama.ai/",
+    "language": "english",
+    "tags": ["herramienta", "código"],
+    "dateAdded": "2025-01-22"
+  },
+  {
+    "title": "AI Explained - YouTube Channel",
+    "description": "Canal con análisis detallados de papers recientes y avances en IA de manera clara.",
+    "url": "https://www.youtube.com/@aiexplained-official",
+    "language": "english",
+    "tags": ["video"],
+    "dateAdded": "2025-01-03",
+    "credits": [
+      {
+        "name": "Elena Vargas",
+        "url": "https://linkedin.com/in/elenavargas"
+      }
+    ]
+  },
+  {
+    "title": "El RAG NO HA MUERTO: Implementa RAG con la API de Gemini | File Search Tool",
+    "description": "Demostración práctica de por qué RAG sigue siendo crucial para crear aplicaciones de IA precisas. Aprende a usar el File Search Tool de Google que elimina la complejidad de RAG, permitiéndote enfocarte en construir experiencias con la API de Gemini.",
+    "url": "https://www.youtube.com/watch?v=F7aePBu-blk",
+    "language": "español",
+    "tags": ["video", "curso", "código"],
+    "dateAdded": "2025-11-19"
+  },
+  {
+    "title": "GraphRAG con Neo4j y Gemini: ¡Potencia tu RAG con Grafos!",
+    "description": "Implementación de GraphRAG combinando Neo4j y Gemini para obtener respuestas más precisas. Incluye pipeline de preprocesamiento, generación automática de grafos de conocimiento, y comparación entre RAG tradicional y GraphRAG.",
+    "url": "https://www.youtube.com/watch?v=QK421j7jago",
+    "language": "español",
+    "tags": ["video", "curso", "código"],
+    "dateAdded": "2025-11-14"
+  },
+  {
+    "title": "¿Tu RAG sufre de alucinaciones? = GraphRAG: Contexto + Precisión",
+    "description": "Exploración de cómo los grafos de conocimiento se combinan con vectores para resolver problemas de RAG tradicionales. Descubre grafos léxicos, sus beneficios y herramientas clave como Neo4j, Spanner y LangChain.",
+    "url": "https://www.youtube.com/watch?v=N0n9vMKsT-M",
+    "language": "español",
+    "tags": ["video", "documentación"],
+    "dateAdded": "2025-11-02"
+  },
+  {
+    "title": "Genkit - An open-source framework para construir AI-powered apps",
+    "description": "Episodio de podcast sobre Genkit, framework open-source para ingeniería de IA. Análisis de su arquitectura, flujos de IA, componentes de trazas, plugins, casos de uso e integraciones.",
+    "url": "https://www.youtube.com/watch?v=36uFG2h1A40",
+    "language": "español",
+    "tags": ["video", "herramienta"],
+    "dateAdded": "2025-09-22"
+  },
+  {
+    "title": "Workshop Genkit: Orquestación de IA con AI Workflows (Flujos, Streaming y Depuración)",
+    "description": "Workshop sobre AI Workflows en Genkit, la piedra angular para construir aplicaciones de IA complejas. Aprende a definir, llamar y depurar flujos de trabajo que van más allá de simples llamadas a modelos.",
+    "url": "https://www.youtube.com/watch?v=Qh75pDO5IVs",
+    "language": "español",
+    "tags": ["video", "curso", "código"],
+    "dateAdded": "2025-09-18"
+  },
+  {
+    "title": "Workshop Genkit: Gestión Avanzada de Prompts con Dotprompt. Los prompts son código.",
+    "description": "Workshop sobre Dotprompt, herramienta que revoluciona la gestión de prompts tratándolos como código. Aprende a crear archivos de prompts, usar la Developer UI, configurar modelos, esquemas y plantillas reutilizables.",
+    "url": "https://www.youtube.com/watch?v=HYA2asAQpak",
+    "language": "español",
+    "tags": ["video", "curso", "código"],
+    "dateAdded": "2025-09-18"
+  },
+  {
+    "title": "Workshop Genkit: Potenciando LLMs con Tool Calling (Function Calling)",
+    "description": "Workshop sobre Tool Calling en Genkit, capacidad que permite a los LLMs interactuar bidireccionalmente con tu aplicación. Aprende a definir herramientas y permitir que los modelos las invoquen estratégicamente.",
+    "url": "https://www.youtube.com/watch?v=tEqmbx9Qg8E",
+    "language": "español",
+    "tags": ["video", "curso", "código"],
+    "dateAdded": "2025-09-18"
+  }
+]

@@ -1,0 +1,35 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container" style="max-width: 900px; margin: 0 auto;">
+    <h1 data-rosey="faq-title">Preguntas Frecuentes</h1>
+    <p class="section-subtitle" data-rosey="faq-subtitle">
+      Todo lo que necesitas saber sobre AI CDMX
+    </p>
+
+    <div style="margin-top: var(--space-xl);">
+      {{ range .Site.Data.faq }}
+      <div class="card card--faq">
+        <h2 data-rosey="faq-q-{{ .id }}">{{ .question }}</h2>
+        <p data-rosey="faq-a-{{ .id }}">{{ .answer }}</p>
+        {{ if .link }}
+        <a class="card-link"
+           href="{{ .link.url }}"
+           {{ if hasPrefix .link.url "http" }}target="_blank" rel="noopener"{{ end }}
+           data-rosey="faq-link-{{ .id }}">
+          {{ .link.text }}
+        </a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+
+    <div class="card card--faq" style="margin-top: var(--space-xl); max-width: 640px; margin-left: auto; margin-right: auto;">
+      <h3 data-rosey="faq-more-questions">¿Tienes más preguntas?</h3>
+      <p data-rosey="faq-contact">
+        Escríbenos a <a href="mailto:contact@hablandodeia.com">contact@hablandodeia.com</a>
+        o contáctanos en nuestras redes sociales. Estaremos encantados de ayudarte.
+      </p>
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,117 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container">
+    <div class="sitemap-header">
+      <h1 data-rosey="sitemap-title">{{ .Title }}</h1>
+      <p data-rosey="sitemap-intro">Explora y comparte todas las páginas públicas del sitio.</p>
+    </div>
+
+    {{ $pages := where .Site.RegularPages ".Params.sitemap_exclude" "ne" true }}
+    {{ $groups := $pages.GroupBy "Section" }}
+
+    <div class="sitemap-grid">
+      {{ range $groups }}
+        {{ $visiblePages := where .Pages ".Params.sitemap_exclude" "ne" true }}
+        {{ if gt (len $visiblePages) 0 }}
+          <div class="sitemap-section">
+            <h2 class="sitemap-section-title">
+              {{- if .Key -}}
+                {{ if eq .Key "site-map" }}
+                  <span data-rosey="sitemap-main-pages-heading">Páginas Principales</span>
+                {{ else }}
+                  {{ humanize .Key }}
+                {{ end }}
+              {{- else -}}
+                <span data-rosey="sitemap-standalone-heading">Páginas individuales</span>
+              {{- end -}}
+            </h2>
+            <ul class="sitemap-list">
+              {{ range sort $visiblePages "LinkTitle" }}
+                <li class="sitemap-item">
+                  {{ $dir := trim .File.Dir "/" }}
+                  {{ $base := cond (ne $dir "") $dir .File.BaseFileName }}
+                  {{ $normalized := replace $base "/" "-" }}
+                  {{ $pageKey := printf "sitemap-page-%s" (urlize $normalized) }}
+                  <a href="{{ .RelPermalink }}" data-rosey="{{ printf "%s-title" $pageKey }}">{{ .LinkTitle }}</a>
+                  {{ with .Params.description }}
+                    <p class="sitemap-item-description" data-rosey="{{ printf "%s-description" $pageKey }}">{{ . }}</p>
+                  {{ end }}
+                </li>
+              {{ end }}
+            </ul>
+          </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<style>
+.sitemap-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+  padding: var(--space-xl);
+  background: var(--color-bg-card);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-deep-purple);
+}
+
+.sitemap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-xl);
+}
+
+.sitemap-section {
+  background: var(--color-bg-card);
+  padding: var(--space-lg);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-deep-purple);
+  transition: border-color var(--transition);
+}
+.sitemap-section:hover {
+  border-color: var(--color-primary);
+}
+
+.sitemap-section-title {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-deep-purple);
+  padding-bottom: var(--space-md);
+  text-transform: capitalize;
+}
+
+.sitemap-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sitemap-item {
+  margin-bottom: var(--space-md);
+}
+
+.sitemap-item:last-child {
+  margin-bottom: 0;
+}
+
+.sitemap-item a {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.sitemap-item a:hover {
+  color: var(--color-primary);
+}
+
+.sitemap-item-description {
+  margin: var(--space-xs) 0 0;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+</style>
+{{ end }}
