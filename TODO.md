@@ -20,6 +20,7 @@
 - [ ] Code of Conduct page outlining community expectations and reporting process
 - [ ] Unlisted Sponsor Prospectus page (no public links, no indexing)
 - [ ] Accessibility & Inclusion page detailing venue accessibility and support services
+- [ ] About AI CDMX. We started in 2023. We host monthly events and workshops. Our goal is AI for all and stories about ai. We want people to think how can i use ai today. 
 
 ### Event Feed System
 - [ ] Design a user-submittable event feed stored in simple JSON so it is easy to maintain
