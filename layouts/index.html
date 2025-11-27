@@ -1,139 +1,35 @@
 {{ define "main" }}
 <section class="hero">
   <div class="container">
-    <h1 data-rosey="hero-title">AI CDMX</h1>
-    <p class="hero-subtitle" data-rosey="hero-subtitle">Comunidad de Inteligencia Artificial en Ciudad de México</p>
-    <p class="hero-description" data-rosey="hero-description">Conectamos entusiastas, profesionales e investigadores de IA en CDMX.</p>
-    <div class="hero-quick-links" role="navigation" aria-label="Secciones principales">
-      <a class="hero-quick-link" href="#eventos" data-rosey="hero-quick-events">Eventos</a>
-      <a class="hero-quick-link" href="#comunidad" data-rosey="hero-quick-community">Comunidad</a>
-      <a class="hero-quick-link" href="#redes" data-rosey="hero-quick-social">Redes Sociales</a>
+    <h1 data-rosey="home-hero-title">HablandoDeIA</h1>
+    <p class="hero-subtitle" data-rosey="home-hero-subtitle">Contando historias sobre inteligencia artificial</p>
+    <p class="hero-description" data-rosey="home-hero-description">Nuestro objetivo es compartir historias sobre IA en español e inglés, conectando a la comunidad hispanohablante con el mundo de la inteligencia artificial.</p>
+    <div class="hero-quick-links" role="navigation" aria-label="Enlaces rápidos" style="margin-top: 2rem;">
+      <a class="hero-quick-link" href="{{ "events/" | relURL }}" data-rosey="home-cta-events">Ver Eventos</a>
+      <a class="hero-quick-link" href="{{ "community-resources/" | relURL }}" data-rosey="home-cta-resources">Recursos</a>
+      <a class="hero-quick-link" href="{{ "voluntariado/" | relURL }}" data-rosey="home-cta-volunteer">Voluntariado</a>
     </div>
   </div>
 </section>
 
-<section id="eventos" class="section">
+<section class="section">
   <div class="container">
-    <h2 data-rosey="section-events-title">Eventos</h2>
+    <h2 data-rosey="home-mission-title">Nuestra Misión</h2>
+    <p class="section-subtitle" data-rosey="home-mission-text">HablandoDeIA es una iniciativa dedicada a democratizar el conocimiento sobre inteligencia artificial a través de historias auténticas y accesibles. Creemos en el poder de las narrativas bilingües para conectar culturas y construir puentes en el mundo de la tecnología.</p>
 
-    <h3 class="section-subtitle" data-rosey="section-events-subtitle">Encuentra nuestros eventos en</h3>
     <div class="card-grid">
-      <a href="https://www.meetup.com/ai-cdmx" class="card" target="_blank" rel="noopener">
-        <svg class="card-icon" aria-hidden="true" focusable="false">
-          <use href="#meetup-svgrepo-com"></use>
-        </svg>
-        <h3>Meetup</h3>
-        <p data-rosey="card-meetup-description">Únete a nuestros eventos presenciales y virtuales.</p>
-      </a>
-      <a href="https://lu.ma/ai-cdmx" class="card" target="_blank" rel="noopener">
-        <svg class="card-icon" aria-hidden="true" focusable="false">
-          <use href="#luma"></use>
-        </svg>
-        <h3>Luma</h3>
-        <p data-rosey="card-luma-description">Descubre y regístrate para próximos eventos.</p>
-      </a>
-      <a href="https://www.youtube.com/@AICDMX" class="card" target="_blank" rel="noopener">
-        <svg class="card-icon" aria-hidden="true" focusable="false">
-          <use href="#youtube-168-svgrepo-com"></use>
-        </svg>
-        <h3>YouTube</h3>
-        <p data-rosey="card-youtube-description">Transmisiones en vivo y grabaciones de eventos.</p>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section id="comunidad" class="section">
-  <div class="container">
-    <h2 data-rosey="section-community-title">Comunidad</h2>
-    <div class="card-grid">
-      <a href="https://discord.gg/FQ7fAdnnJ5" class="card" target="_blank" rel="noopener">
-        <svg class="card-icon" aria-hidden="true" focusable="false">
-          <use href="#discord-svgrepo-com"></use>
-        </svg>
-        <h3>Discord</h3>
-        <p data-rosey="card-discord-description">Chat en tiempo real con la comunidad.</p>
-      </a>
-      <a href="https://t.me/AI_CDMX" class="card" target="_blank" rel="noopener">
-        <svg class="card-icon" aria-hidden="true" focusable="false">
-          <use href="#telegram-fill-svgrepo-com"></use>
-        </svg>
-        <h3>Telegram</h3>
-        <p data-rosey="card-telegram-description">Grupo de discusión y noticias.</p>
-      </a>
-      <a href="https://signal.group/#CjQKIB5gZjyHMHQvQh9IJbr8OSd6EMGpWlgO2LKDDFcrKl_dEhBUBxMqcQI5OD_NuFeFS3o2" class="card" target="_blank" rel="noopener">
-        <svg class="card-icon" aria-hidden="true" focusable="false">
-          <use href="#signal-svgrepo-com"></use>
-        </svg>
-        <h3>Signal</h3>
-        <p data-rosey="card-signal-description">Grupo seguro y privado.</p>
-      </a>
-      <a href="https://chat.whatsapp.com/EMPPXiTzSg57Efo1f3bysZ" class="card" target="_blank" rel="noopener">
-        <svg class="card-icon" aria-hidden="true" focusable="false">
-          <use href="#whatsapp-whats-app-svgrepo-com"></use>
-        </svg>
-        <h3>WhatsApp</h3>
-        <p data-rosey="card-whatsapp-description">Comunidad de WhatsApp para networking.</p>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section id="redes" class="section">
-  <div class="container">
-    <h2 data-rosey="section-social-title">Redes Sociales</h2>
-    <div class="social-links">
-      <a href="https://x.com/ai_cdmx" target="_blank" rel="noopener">
-        <svg class="social-icon" aria-hidden="true" focusable="false">
-          <use href="#twitter-154-svgrepo-com"></use>
-        </svg>
-        X / Twitter
-      </a>
-      <a href="https://www.instagram.com/cdmxai/" target="_blank" rel="noopener">
-        <svg class="social-icon" aria-hidden="true" focusable="false">
-          <use href="#instagram-167-svgrepo-com"></use>
-        </svg>
-        Instagram
-      </a>
-      <a href="https://www.facebook.com/aicdmx" target="_blank" rel="noopener">
-        <svg class="social-icon" aria-hidden="true" focusable="false">
-          <use href="#facebook-svgrepo-com"></use>
-        </svg>
-        Facebook
-      </a>
-      <a href="https://www.linkedin.com/company/ai-cdmx" target="_blank" rel="noopener">
-        <svg class="social-icon" aria-hidden="true" focusable="false">
-          <use href="#linkedin-161-svgrepo-com"></use>
-        </svg>
-        LinkedIn
-      </a>
-      <a href="https://www.tiktok.com/@ai.cdmx" target="_blank" rel="noopener">
-        <svg class="social-icon" aria-hidden="true" focusable="false">
-          <use href="#tiktok-svgrepo-com"></use>
-        </svg>
-        TikTok
-      </a>
-    </div>
-  </div>
-</section>
-
-<section id="sigue" class="section">
-  <div class="container">
-    <h2 data-rosey="section-more-title">¿Quieres seguir explorando?</h2>
-    <p class="section-subtitle" data-rosey="section-more-subtitle">Descubre más contenido y formas de involucrarte con AI CDMX.</p>
-    <div class="card-grid">
-      <a href="{{ "popular-videos/" | relURL }}" class="card">
-        <h3 data-rosey="section-more-videos-title">Videos populares</h3>
-        <p data-rosey="section-more-videos-text">Revive charlas, paneles y streams con speakers de la comunidad.</p>
-      </a>
-      <a href="{{ "voluntariado/" | relURL }}" class="card">
-        <h3 data-rosey="section-more-volunteer-title">Voluntariado y alianzas</h3>
-        <p data-rosey="section-more-volunteer-text">Conoce cómo puedes apoyar como sponsor, speaker o parte del equipo.</p>
-      </a>
-      <a href="{{ "speaker-guide/" | relURL }}" class="card">
-        <h3 data-rosey="section-more-speakers-title">Guía para speakers</h3>
-        <p data-rosey="section-more-speakers-text">Aprende qué tipo de historias buscamos y cómo preparar tu propuesta.</p>
-      </a>
+      <div class="card">
+        <h3 data-rosey="home-mission-stories-title">Historias Auténticas</h3>
+        <p data-rosey="home-mission-stories-text">Compartimos experiencias reales de personas trabajando con IA, desde investigadores hasta emprendedores.</p>
+      </div>
+      <div class="card">
+        <h3 data-rosey="home-mission-bilingual-title">Contenido Bilingüe</h3>
+        <p data-rosey="home-mission-bilingual-text">Todo nuestro contenido está disponible en español e inglés, ampliando el acceso al conocimiento.</p>
+      </div>
+      <div class="card">
+        <h3 data-rosey="home-mission-community-title">Comunidad Global</h3>
+        <p data-rosey="home-mission-community-text">Conectamos a la comunidad hispanohablante de IA con expertos y entusiastas de todo el mundo.</p>
+      </div>
     </div>
   </div>
 </section>

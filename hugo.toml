@@ -1,6 +1,6 @@
 baseURL = 'https://hablandodeia.com/'
 languageCode = 'es-MX'
-title = 'AI CDMX - Comunidad de Inteligencia Artificial en Ciudad de México'
+title = 'Hablando De IA'
 
 [params]
   description = 'Comunidad de entusiastas de la inteligencia artificial en Ciudad de México. Eventos, networking y recursos.'
