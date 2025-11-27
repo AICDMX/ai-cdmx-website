@@ -1,21 +1,24 @@
 <header class="header" x-data="{ open: false }">
   <nav class="nav container">
+    
     <a href="{{ "/" | relURL }}" class="logo">
-      <picture>
-        <source type="image/webp" srcset="{{ "assets/logo-40x40.webp" | relURL }} 1x, {{ "assets/logo-80x80.webp" | relURL }} 2x">
-        <img src="{{ "assets/logo-40x40.png" | relURL }}" srcset="{{ "assets/logo-40x40.png" | relURL }} 1x, {{ "assets/logo-80x80.png" | relURL }} 2x" alt="AI CDMX" class="logo-img" width="40" height="40">
-      </picture>
-      AI CDMX
-    </a>
-
-    <!-- Mobile menu button -->
-    <button class="menu-toggle" @click.stop="open = !open" aria-label="Menu">
-      <span class="menu-icon" :class="open && 'open'"></span>
-    </button>
+    
+            
+    
+      Hablando De IA
+    
+    </a>    <!-- Mobile menu button -->
+    <div class="mobile-menu-controls">
+      <a href="#" class="lang-toggle-mobile" onclick="toggleLanguage(event)">EN</a>
+      <button class="menu-toggle" @click.stop="open = !open" aria-label="Menu">
+        <span class="menu-icon" :class="open && 'open'"></span>
+      </button>
+    </div>
 
     <!-- Nav links -->
     <div class="nav-links" :class="open && 'active'" @click.outside="open = false">
       <a href="{{ "/" | relURL }}" @click="open = false" data-rosey="nav-home">Inicio</a>
+      <a href="{{ "events/" | relURL }}" @click="open = false" data-rosey="nav-events">Eventos</a>
       <a href="{{ "popular-videos/" | relURL }}" @click="open = false" data-rosey="nav-videos">Videos</a>
       <a href="{{ "voluntariado/" | relURL }}" @click="open = false" data-rosey="nav-volunteer">Voluntariado</a>
       <a href="{{ "community-resources/" | relURL }}" @click="open = false" data-rosey="nav-resources">Recursos</a>

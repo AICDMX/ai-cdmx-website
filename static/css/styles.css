@@ -521,8 +521,28 @@ h1 {
 }
 
 /* Mobile Menu Toggle */
-.menu-toggle {
+.mobile-menu-controls {
   display: none;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.lang-toggle-mobile {
+  display: none; /* Hidden by default */
+  padding: var(--space-xs) var(--space-md);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-primary) !important;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.lang-toggle-mobile:hover {
+  background-color: var(--color-primary);
+  color: var(--color-bg) !important;
+}
+
+.menu-toggle {
   background: none;
   border: none;
   cursor: pointer;
@@ -573,7 +593,11 @@ h1 {
 
 /* Mobile */
 @media (max-width: 640px) {
-  .menu-toggle {
+  .mobile-menu-controls {
+    display: flex;
+  }
+
+  .lang-toggle-mobile {
     display: block;
   }
 
