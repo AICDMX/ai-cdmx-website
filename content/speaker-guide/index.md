@@ -7,55 +7,14 @@ description: "Qué buscamos en las charlas de AI CDMX y cómo preparar tu partic
   <div class="container" style="max-width: 820px; margin: 0 auto;">
     <p class="section-subtitle" data-rosey="speaker-guide-badge">Ponentes</p>
     <h1 data-rosey="speaker-guide-title">Historias sobre IA que conectan</h1>
-    <p data-rosey="speaker-guide-intro">
-      En AI CDMX celebramos narrativas que muestran cómo la inteligencia artificial impacta personas, comunidades y organizaciones. Buscamos historias humanas, casos reales y aprendizajes que inspiren a cualquier nivel de experiencia.
+    <p data-rosey="speaker-guide-plan-note">
+      Actualmente planeamos los eventos con 2 a 4 meses de anticipación.
     </p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="card-grid playlist-grid">
-      <div class="card featured">
-        <h2 data-rosey="speaker-guide-form-title">Envía tu propuesta</h2>
-        <p data-rosey="speaker-guide-form-text">
-          Cuando tengas tu idea lista, completa el formulario para ponentes y cuéntanos el enfoque de tu historia, formato deseado y disponibilidad.
-        </p>
-        <a class="lang-toggle" style="display: inline-block; margin-top: var(--space-md);" target="_blank" rel="noopener" href="https://docs.google.com/forms/d/e/1FAIpQLSeEwQ1_yicM1rglXNVd-139ghypm75CDn7V-5nEWRihWqjr6g/viewform?usp=dialog" data-rosey="speaker-guide-form-button">
-          Abrir formulario para ponentes
-        </a>
-        <p style="margin-top: var(--space-lg);" data-rosey="speaker-guide-volunteer-link">
-          ¿Quieres ayudar en otras áreas (sponsors, venues, moderación, workshops)? Visita nuestra <a href="{{ "voluntariado/" | relURL }}">página de voluntariado</a> para ver todas las maneras de colaborar.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="section">
-  <div class="container" style="max-width: 900px; margin: 0 auto;">
-    <h2 data-rosey="speaker-guide-format-title">Qué tipo de charlas buscamos</h2>
-    <ul style="line-height: 1.7; margin-left: var(--space-lg);">
-      <li data-rosey="speaker-guide-format-1">
-        Historias personales sobre construir, lanzar o implementar soluciones de IA en México o Latinoamérica.
-      </li>
-      <li data-rosey="speaker-guide-format-2">
-        Casos de uso con foco en impacto (negocio, social, educativo, creativo) más que en código.
-      </li>
-      <li data-rosey="speaker-guide-format-3">
-        Conversaciones con learnings: qué funcionó, qué no, y consejos prácticos para la comunidad.
-      </li>
-    </ul>
-    <p data-rosey="speaker-guide-tech-talks">
-      ¿Quieres compartir una charla técnica profunda? Te podemos recomendar otras comunidades excelentes enfocadas en código y algoritmos. Nosotros priorizamos el storytelling y la experiencia.
+    <p data-rosey="speaker-guide-focus-note">
+      Internet está lleno de guías del “cómo hacerlo”. Nuestro enfoque es explicar “por qué deberías hacerlo”. Queremos ponentes que muestren por qué vale la pena cuidar lo suficiente como para construir algo y que conecten con quienes ya lo están haciendo. Esto se logra compartiendo fracasos y éxitos: “Me costó mucho resolver X, así que decidí construir; mientras lo hacía batallé con Y, pero al final logré Z”.
     </p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2 data-rosey="speaker-guide-workshops-title">¿Y si quiero ir más a fondo?</h2>
-    <p data-rosey="speaker-guide-workshops-text">
-      Si tienes un tema que amerita ensuciarse las manos y revisar notebooks, proponnos un workshop. Podemos ayudarte a conseguir espacio (generalmente en sábado) para sesiones de 1 a 3 horas donde la gente pueda llevar laptop, practicar y preguntar con más calma.
+    <p data-rosey="speaker-guide-storytelling-top">
+      ¿Quieres más ideas sobre cómo contar historias? Explora nuestros <a href="{{ "speaker-storytelling/" | relURL }}">recursos de storytelling para speakers</a>.
     </p>
   </div>
 </section>
@@ -78,37 +37,89 @@ description: "Qué buscamos en las charlas de AI CDMX y cómo preparar tu partic
 </section>
 
 <section class="section">
-  <div class="container" style="max-width: 780px; margin: 0 auto;">
-    <h2 data-rosey="speaker-guide-prepare-title">Cómo prepararte</h2>
+  <div class="container" style="max-width: 900px; margin: 0 auto;">
+    <h2 data-rosey="speaker-guide-need-title">Lo que necesitamos de ti</h2>
+    <p data-rosey="speaker-guide-need-intro">
+      Para poder agendarte necesitamos tener tres cosas:
+    </p>
     <ol style="margin-left: var(--space-md); line-height: 1.6;">
-      <li data-rosey="speaker-guide-prepare-1">
-        Define el hilo narrativo: ¿qué transformación, reto o aprendizaje principal quieres que la audiencia recuerde?
+      <li data-rosey="speaker-guide-need-list-1">Una fotografía tuya para usar en banners y materiales promocionales.</li>
+      <li>
+        <span data-rosey="speaker-guide-need-list-2">Una descripción de la historia que quieres contar y los temas que quieres cubrir. Son dos partes relacionadas, pero no iguales.</span>
+        <ol style="margin-left: var(--space-md); line-height: 1.6; list-style-type: lower-alpha;">
+          <li data-rosey="speaker-guide-need-list-2a">Preparamos una descripción y un esquema de lo que compartirás para convencer a la audiencia de escucharte. Esto se necesita con mucha anticipación.</li>
+          <li data-rosey="speaker-guide-need-list-2b">Lo que realmente compartes en el escenario. Esto puede ajustarse —al menos en parte— hasta poco antes de la presentación.</li>
+        </ol>
       </li>
-      <li data-rosey="speaker-guide-prepare-2">
-        Prioriza ejemplos concretos y demos simples en lugar de largas slides técnicas.
-      </li>
-      <li data-rosey="speaker-guide-prepare-3">
-        Envíanos bio corta, headshot y enlaces relevantes al menos 10 días antes del evento.
-      </li>
-      <li data-rosey="speaker-guide-prepare-4">
-        Si tu charla requiere workshop posterior, indícanos equipo necesario y tamaño ideal del grupo.
-      </li>
+      <li data-rosey="speaker-guide-need-list-3">Una bio corta: tu nombre, cargo, empresa u organización con la que quieres que te relacionemos y los enlaces que quieras compartir (LinkedIn, GitHub, Twitter, etc.).</li>
     </ol>
+    <p style="margin-top: var(--space-md);" data-rosey="speaker-guide-need-form-note">
+      Cuando tengas esto listo, completa el formulario para ponentes para que podamos definir fechas y detalles.
+    </p>
+    <p style="margin-top: var(--space-sm);" data-rosey="speaker-guide-need-volunteer-note">
+      ¿Quieres apoyar en otras áreas (sponsors, venues, moderación, workshops)? Visita nuestra <a href="{{ "voluntariado/" | relURL }}">página de voluntariado</a> para conocer todas las formas de colaborar.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width: 900px; margin: 0 auto;">
+    <h2 data-rosey="speaker-guide-audience-title">Recuerda a tu audiencia</h2>
+    <p data-rosey="speaker-guide-audience-text">
+      Como mucho, 20-30% de la audiencia es técnica. Cuenta la historia de forma que sea atractiva y comprensible para todas las personas en el espacio.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width: 900px; margin: 0 auto;">
+    <h2 data-rosey="speaker-guide-reframe-title">Cómo replantearlo: la chuleta</h2>
+    <p data-rosey="speaker-guide-reframe-emotion"><strong>Encuentra tu emoción</strong> - ¿Con qué luchaste? ¿Qué emociones te impulsaron? “Me preocupé mucho y supe que algo tenía que cambiar” es el tipo de frase con la que la gente conecta.</p>
+    <p data-rosey="speaker-guide-reframe-person"><strong>Encuentra a tu persona</strong> - Presenta a Jane (puede ser real o ficticia). Vive en cierto lugar y tiene cierto problema. Su clínica local no tiene el conocimiento, equipo o personal necesario.</p>
+    <p data-rosey="speaker-guide-reframe-stakes"><strong>Omite el cómo, muestra lo que está en juego</strong> - No expliques la solución técnica: explica por qué importa. “Probablemente nunca pasará porque no hay recursos para ello” es el problema humano real.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width: 900px; margin: 0 auto;">
+    <h2 data-rosey="speaker-guide-story-title">Cuenta historias, no specs</h2>
+    <p data-rosey="speaker-guide-story-text">
+      Lo mejor es que compartas tu experiencia como experta o experto en tu nicho. Cuando hables de IA, cuenta con qué batallaste, qué emociones te movieron y por qué crees que es importante.
+    </p>
+    <h3 data-rosey="speaker-guide-story-bad-title">Lo que no conecta</h3>
+    <p data-rosey="speaker-guide-story-bad-text-1">Decirle a la gente que “es importante porque…” no genera conexión.</p>
+    <p data-rosey="speaker-guide-story-bad-text-2">Decir que las industrias con pocos recursos no pueden ayudar porque no los tienen es obvio y aburrido.</p>
+    <h3 data-rosey="speaker-guide-story-good-title">Lo que sí conecta</h3>
+    <p data-rosey="speaker-guide-story-good-text-1">Decir “me preocupé muchísimo y supe que algo tenía que cambiar” sí conecta.</p>
+    <p data-rosey="speaker-guide-story-good-text-2">Presentar a Jane (real o ficticia): vive en tal lugar, tiene tal problema, su clínica local no tiene el conocimiento/equipo y probablemente nunca lo tendrá porque no hay recursos; eso sí genera empatía.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container card-grid playlist-grid">
+    <div class="card featured" style="padding: var(--space-xl);">
+      <h3 data-rosey="speaker-guide-form-title">Envía tu propuesta</h3>
+      <p data-rosey="speaker-guide-form-text">
+        Cuando tengas tu idea lista, completa el formulario para ponentes y cuéntanos el enfoque de tu historia, formato deseado y disponibilidad.
+      </p>
+      <a class="lang-toggle" style="display: inline-block; margin-top: var(--space-sm);" target="_blank" rel="noopener" href="https://docs.google.com/forms/d/e/1FAIpQLSeEwQ1_yicM1rglXNVd-139ghypm75CDn7V-5nEWRihWqjr6g/viewform?usp=dialog" data-rosey="speaker-guide-form-button">
+        Abrir formulario para ponentes
+      </a>
+      <p style="margin-top: var(--space-md);" data-rosey="speaker-guide-volunteer-link">
+        ¿Quieres ayudar en otras áreas (sponsors, venues, moderación, workshops)? Visita nuestra <a href="{{ "voluntariado/" | relURL }}">página de voluntariado</a> para ver todas las maneras de colaborar.
+      </p>
+      <p style="margin-top: var(--space-sm);" data-rosey="speaker-guide-storytelling-bottom">
+        ¿Quieres más inspiración sobre cómo estructuramos historias? Mira nuestra <a href="{{ "speaker-storytelling/" | relURL }}">guía de storytelling para speakers</a>.
+      </p>
+    </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="card-grid playlist-grid">
-      <div class="card featured">
-        <h3 data-rosey="speaker-guide-cta-title">¿Listo para contarnos tu historia?</h3>
-        <p data-rosey="speaker-guide-cta-text">
-          Llena el formulario para ponentes con tu propuesta. Te responderemos con fechas tentativas y siguientes pasos.
-        </p>
-        <a class="lang-toggle" style="display: inline-block; margin-top: var(--space-md);" target="_blank" rel="noopener" href="https://docs.google.com/forms/d/e/1FAIpQLSeEwQ1_yicM1rglXNVd-139ghypm75CDn7V-5nEWRihWqjr6g/viewform?usp=dialog" data-rosey="speaker-guide-cta-button">
-          Enviar propuesta
-        </a>
-      </div>
-    </div>
+    <h2 data-rosey="speaker-guide-workshops-title">¿Y si quiero ir más a fondo?</h2>
+    <p data-rosey="speaker-guide-workshops-text">
+      Si tienes un tema que amerita ensuciarse las manos y revisar notebooks, proponnos un workshop. Podemos ayudarte a conseguir espacio (generalmente en sábado) para sesiones de 1 a 3 horas donde la gente pueda llevar laptop, practicar y preguntar con más calma.
+    </p>
   </div>
 </section>
