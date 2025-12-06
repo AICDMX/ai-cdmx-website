@@ -42,21 +42,21 @@ description: "Qué buscamos en las charlas de AI CDMX y cómo preparar tu partic
     <p data-rosey="speaker-guide-need-intro">
       Para poder agendarte necesitamos tener tres cosas:
     </p>
-    <ol style="margin-left: var(--space-md); line-height: 1.6;">
+    <ol class="list-primary">
       <li data-rosey="speaker-guide-need-list-1">Una fotografía tuya para usar en banners y materiales promocionales.</li>
       <li>
         <span data-rosey="speaker-guide-need-list-2">Una descripción de la historia que quieres contar y los temas que quieres cubrir. Son dos partes relacionadas, pero no iguales.</span>
-        <ol style="margin-left: var(--space-md); line-height: 1.6; list-style-type: lower-alpha;">
+        <ol class="list-secondary">
           <li data-rosey="speaker-guide-need-list-2a">Preparamos una descripción y un esquema de lo que compartirás para convencer a la audiencia de escucharte. Esto se necesita con mucha anticipación.</li>
           <li data-rosey="speaker-guide-need-list-2b">Lo que realmente compartes en el escenario. Esto puede ajustarse —al menos en parte— hasta poco antes de la presentación.</li>
         </ol>
       </li>
       <li data-rosey="speaker-guide-need-list-3">Una bio corta: tu nombre, cargo, empresa u organización con la que quieres que te relacionemos y los enlaces que quieras compartir (LinkedIn, GitHub, Twitter, etc.).</li>
     </ol>
-    <p style="margin-top: var(--space-md);" data-rosey="speaker-guide-need-form-note">
+    <p class="text-note" data-rosey="speaker-guide-need-form-note">
       Cuando tengas esto listo, completa el formulario para ponentes para que podamos definir fechas y detalles.
     </p>
-    <p style="margin-top: var(--space-sm);" data-rosey="speaker-guide-need-volunteer-note">
+    <p class="text-note" data-rosey="speaker-guide-need-volunteer-note">
       ¿Quieres apoyar en otras áreas (sponsors, venues, moderación, workshops)? Visita nuestra <a href="{{ "voluntariado/" | relURL }}">página de voluntariado</a> para conocer todas las formas de colaborar.
     </p>
   </div>
