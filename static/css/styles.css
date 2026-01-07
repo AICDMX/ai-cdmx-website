@@ -363,6 +363,23 @@ a.card:hover::after {
   transform: translateY(-2px);
 }
 
+/* CTA Button - for prominent call-to-action */
+.cta-button {
+  display: inline-block;
+  padding: var(--space-sm) var(--space-xl);
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  border-radius: var(--border-radius-sm);
+  font-weight: 600;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 174, 255, 0.3);
+  color: var(--color-bg);
+}
+
 .card-grid.playlist-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));

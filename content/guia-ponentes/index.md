@@ -104,7 +104,7 @@ aliases:
       <p data-rosey="speaker-guide-form-text">
         Cuando tengas tu idea lista, completa el formulario para ponentes y cuéntanos el enfoque de tu historia, formato deseado y disponibilidad.
       </p>
-      <a class="lang-toggle" style="display: inline-block; margin-top: var(--space-sm);" target="_blank" rel="noopener" href="https://docs.google.com/forms/d/e/1FAIpQLSeEwQ1_yicM1rglXNVd-139ghypm75CDn7V-5nEWRihWqjr6g/viewform?usp=dialog" data-rosey="speaker-guide-form-button">
+      <a class="cta-button" style="margin-top: var(--space-sm);" target="_blank" rel="noopener" href="https://docs.google.com/forms/d/e/1FAIpQLSeEwQ1_yicM1rglXNVd-139ghypm75CDn7V-5nEWRihWqjr6g/viewform?usp=dialog" data-rosey="speaker-guide-form-button">
         Abrir formulario para ponentes
       </a>
       <p style="margin-top: var(--space-md);" data-rosey="speaker-guide-volunteer-link">
