@@ -1,6 +1,8 @@
 ---
 title: "Acerca de"
 description: "Sobre AI CDMX y nuestra comunidad"
+aliases:
+  - /about/
 ---
 
 <div style="max-width: 800px; margin: 0 auto;">

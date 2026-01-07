@@ -1,6 +1,8 @@
 ---
 title: "Leadership"
 description: "Meet the team guiding AI CDMX."
+aliases:
+  - /leadership/
 ---
 
 <section class="section leadership-page">

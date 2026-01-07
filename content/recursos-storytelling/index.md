@@ -1,6 +1,8 @@
 ---
 title: "Recursos de Storytelling para Speakers"
 description: "Videos curados para estructurar charlas de IA con emoción y claridad."
+aliases:
+  - /speaker-storytelling/
 ---
 
 <section class="section">

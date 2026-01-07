@@ -1,6 +1,8 @@
 ---
 title: "Guía para ponentes"
 description: "Qué buscamos en las charlas de AI CDMX y cómo preparar tu participación."
+aliases:
+  - /speaker-guide/
 ---
 
 <section class="section">
