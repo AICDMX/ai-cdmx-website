@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script>
+    (function() {
+      var defined =  {{ with .Permalink }}'{{ . }}'{{ else }}''{{ end }};
+      var defined_path = defined.replace(/^https?:\/\/[^\/]+/, '');
+      var defined_slug = defined_path.replace(/^\//,'').replace(/\/$/,'');
+      var defined_is_home = defined_slug === '';
+      var current = window.location.pathname;
+      var lang_match = current.match(/^\/(es|en)\//);
+      var lang = lang_match ? lang_match[1] : 'es';
+      var target;
+      if (defined_is_home) {
+        target = '/' + lang + '/';
+      } else {
+        target = '/' + lang + '/' + defined_slug + '/';
+      }
+      window.location.replace(target);
+    })();
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url={{ .Permalink }}">
+  </noscript>
+</head>
+<body>
+  <p>Redirecting to <a href="{{ .Permalink }}">{{ .Permalink }}</a>...</p>
+</body>
+</html>
