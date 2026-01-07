@@ -145,18 +145,39 @@ a:hover {
 
 /* Hero */
 .hero {
-  padding: var(--space-3xl) 0;
+  padding: var(--space-3xl) 0 var(--space-2xl);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 174, 255, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
   font-weight: 700;
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
   background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  filter: drop-shadow(0 0 30px rgba(0, 174, 255, 0.3));
 }
 
 .hero-subtitle {
@@ -199,7 +220,19 @@ a:hover {
 
 /* Sections */
 .section {
-  padding: var(--space-2xl) 0;
+  padding: var(--space-3xl) 0;
+  position: relative;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(200px, 40%);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-deep-purple), var(--color-primary), var(--color-deep-purple), transparent);
 }
 
 .section h2 {
@@ -287,6 +320,24 @@ h1 {
 .card p {
   color: var(--color-text-muted);
   font-size: 0.95rem;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: var(--space-lg);
+  padding: var(--space-sm) var(--space-lg);
+  background-color: rgba(0, 174, 255, 0.12);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-primary);
+  font-weight: 600;
+  transition: background-color var(--transition), color var(--transition), transform var(--transition);
+}
+
+.card-link:hover {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  transform: translateY(-2px);
 }
 
 .card-grid.playlist-grid {
@@ -515,10 +566,20 @@ h1 {
 
 /* Footer */
 .footer {
-  padding: var(--space-xl) 0;
+  padding: var(--space-2xl) 0;
   text-align: center;
   color: var(--color-text-muted);
   border-top: 1px solid var(--color-deep-purple);
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: var(--color-text-muted);
+  transition: color var(--transition);
+}
+
+.footer a:hover {
+  color: var(--color-primary);
 }
 
 /* Mobile Menu Toggle */
@@ -647,6 +708,11 @@ h1 {
 
   .hero {
     padding: var(--space-2xl) 0;
+  }
+
+  .hero::before {
+    width: 300px;
+    height: 300px;
   }
 
   .section {
