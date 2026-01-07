@@ -15,10 +15,10 @@ aliases:
     <p data-rosey="story2-hero-note">
       Mira al menos uno por idioma para estructurar descripciones, bios y charlas impactantes. Completa la preparación con nuestra <a href="/guia-ponentes/">guía para ponentes</a>.
     </p>
-    <div class="button-row" style="margin-top: var(--space-lg); display: flex; flex-wrap: wrap; gap: var(--space-sm);">
-      <a class="lang-toggle" href="#story2-english" data-rosey="story2-hero-btn-english">Ir a videos en inglés</a>
-      <a class="lang-toggle" href="#story2-spanish" data-rosey="story2-hero-btn-spanish">Ir a videos en español</a>
-      <a class="lang-toggle" href="#story2-tech" data-rosey="story2-hero-btn-tech">Storytelling para AI/Tech</a>
+    <div class="hero-quick-links" style="margin-top: var(--space-lg); justify-content: flex-start;">
+      <a class="hero-quick-link" href="#story2-english" data-rosey="story2-hero-btn-english">Ir a videos en inglés</a>
+      <a class="hero-quick-link" href="#story2-spanish" data-rosey="story2-hero-btn-spanish">Ir a videos en español</a>
+      <a class="hero-quick-link" href="#story2-tech" data-rosey="story2-hero-btn-tech">Storytelling para AI/Tech</a>
     </div>
   </div>
 </section>
