@@ -44,7 +44,7 @@ serve: build ## Build and serve the complete multilingual site
 
 down: ## Stop the server running on port 8000
 	@echo "Stopping server on port 8000..."
-	@pkill -f "python.*http.server 8000" && echo "Server stopped." || echo "No server found running on port 8000."
+	@lsof -ti:8000 | xargs -r kill 2>/dev/null && echo "Server stopped." || echo "No server found running on port 8000."
 
 restart: down serve ## Restart the server (stop and start fresh)
 
