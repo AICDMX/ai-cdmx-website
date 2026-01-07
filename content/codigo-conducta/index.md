@@ -2,6 +2,8 @@
 title: "Código de Conducta"
 description: "Reglas claras para el feed de discusión de IA de AI CDMX."
 layout: single
+aliases:
+  - /code-of-conduct/
 ---
 
 <h1 data-rosey="conduct-title">Feed de Discusión de IA</h1>
