@@ -295,6 +295,7 @@ h1 {
   border: 1px solid transparent;
   flex: 0 1 280px;
   max-width: 350px;
+  position: relative;
 }
 
 .card-icon {
@@ -309,6 +310,28 @@ h1 {
   transform: translateY(-4px);
   border-color: var(--color-primary);
   box-shadow: 0 8px 32px rgba(0, 174, 255, 0.15);
+}
+
+/* Clickable cards (when card is an anchor) */
+a.card {
+  cursor: pointer;
+}
+
+a.card::after {
+  content: '→';
+  position: absolute;
+  bottom: var(--space-md);
+  right: var(--space-md);
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity var(--transition), transform var(--transition);
+  color: var(--color-primary);
+  font-size: 1.25rem;
+}
+
+a.card:hover::after {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .card h3 {
