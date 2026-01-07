@@ -18,11 +18,11 @@
     <!-- Nav links -->
     <div class="nav-links" :class="open && 'active'" @click.outside="open = false">
       <a href="{{ "/" | relURL }}" @click="open = false" data-rosey="nav-home">Inicio</a>
-      <a href="{{ "events/" | relURL }}" @click="open = false" data-rosey="nav-events">Eventos</a>
-      <a href="{{ "popular-videos/" | relURL }}" @click="open = false" data-rosey="nav-videos">Videos</a>
-      <a href="{{ "speaker-guide/" | relURL }}" @click="open = false" data-rosey="nav-speakers">Ponentes</a>
+      <a href="{{ "eventos/" | relURL }}" @click="open = false" data-rosey="nav-events">Eventos</a>
+      <a href="{{ "videos-populares/" | relURL }}" @click="open = false" data-rosey="nav-videos">Videos</a>
+      <a href="{{ "guia-ponentes/" | relURL }}" @click="open = false" data-rosey="nav-speakers">Ponentes</a>
       <a href="{{ "voluntariado/" | relURL }}" @click="open = false" data-rosey="nav-volunteer">Voluntariado</a>
-      <a href="{{ "community-resources/" | relURL }}" @click="open = false" data-rosey="nav-resources">Recursos</a>
+      <a href="{{ "recursos-comunidad/" | relURL }}" @click="open = false" data-rosey="nav-resources">Recursos</a>
       <a href="#" class="lang-toggle" onclick="toggleLanguage(event)">EN</a>
     </div>
   </nav>

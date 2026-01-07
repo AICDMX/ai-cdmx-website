@@ -11,7 +11,7 @@ description: "Videos curados para estructurar charlas de IA con emoción y clari
       Prepara tu charla sobre IA contando tu experiencia personal, emociones y luchas reales (por ejemplo, "conocí a Jane en X lugar con Y problema"). Estos videos te enseñan a conectar con audiencias no técnicas, motivando acción inmediata.
     </p>
     <p data-rosey="story2-hero-note">
-      Mira al menos uno por idioma para estructurar descripciones, bios y charlas impactantes. Completa la preparación con nuestra <a href="{{ "speaker-guide/" | relURL }}">guía para ponentes</a>.
+      Mira al menos uno por idioma para estructurar descripciones, bios y charlas impactantes. Completa la preparación con nuestra <a href="/guia-ponentes/">guía para ponentes</a>.
     </p>
     <div class="button-row" style="margin-top: var(--space-lg); display: flex; flex-wrap: wrap; gap: var(--space-sm);">
       <a class="lang-toggle" href="#story2-english" data-rosey="story2-hero-btn-english">Ir a videos en inglés</a>

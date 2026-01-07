@@ -14,7 +14,7 @@ description: "Qué buscamos en las charlas de AI CDMX y cómo preparar tu partic
       Internet está lleno de guías del “cómo hacerlo”. Nuestro enfoque es explicar “por qué deberías hacerlo”. Queremos ponentes que muestren por qué vale la pena cuidar lo suficiente como para construir algo y que conecten con quienes ya lo están haciendo. Esto se logra compartiendo fracasos y éxitos: “Me costó mucho resolver X, así que decidí construir; mientras lo hacía batallé con Y, pero al final logré Z”.
     </p>
     <p data-rosey="speaker-guide-storytelling-top">
-      ¿Quieres más ideas sobre cómo contar historias? Explora nuestros <a href="{{ "speaker-storytelling/" | relURL }}">recursos de storytelling para speakers</a>.
+      ¿Quieres más ideas sobre cómo contar historias? Explora nuestros <a href="/recursos-storytelling/">recursos de storytelling para speakers</a>.
     </p>
   </div>
 </section>
@@ -57,7 +57,7 @@ description: "Qué buscamos en las charlas de AI CDMX y cómo preparar tu partic
       Cuando tengas esto listo, completa el formulario para ponentes para que podamos definir fechas y detalles.
     </p>
     <p class="text-note" data-rosey="speaker-guide-need-volunteer-note">
-      ¿Quieres apoyar en otras áreas (sponsors, venues, moderación, workshops)? Visita nuestra <a href="{{ "voluntariado/" | relURL }}">página de voluntariado</a> para conocer todas las formas de colaborar.
+      ¿Quieres apoyar en otras áreas (sponsors, venues, moderación, workshops)? Visita nuestra <a href="/voluntariado/">página de voluntariado</a> para conocer todas las formas de colaborar.
     </p>
   </div>
 </section>
@@ -106,10 +106,10 @@ description: "Qué buscamos en las charlas de AI CDMX y cómo preparar tu partic
         Abrir formulario para ponentes
       </a>
       <p style="margin-top: var(--space-md);" data-rosey="speaker-guide-volunteer-link">
-        ¿Quieres ayudar en otras áreas (sponsors, venues, moderación, workshops)? Visita nuestra <a href="{{ "voluntariado/" | relURL }}">página de voluntariado</a> para ver todas las maneras de colaborar.
+        ¿Quieres ayudar en otras áreas (sponsors, venues, moderación, workshops)? Visita nuestra <a href="/voluntariado/">página de voluntariado</a> para ver todas las maneras de colaborar.
       </p>
       <p style="margin-top: var(--space-sm);" data-rosey="speaker-guide-storytelling-bottom">
-        ¿Quieres más inspiración sobre cómo estructuramos historias? Mira nuestra <a href="{{ "speaker-storytelling/" | relURL }}">guía de storytelling para speakers</a>.
+        ¿Quieres más inspiración sobre cómo estructuramos historias? Mira nuestra <a href="/recursos-storytelling/">guía de storytelling para speakers</a>.
       </p>
     </div>
   </div>
