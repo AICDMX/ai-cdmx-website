@@ -33,7 +33,7 @@ serve: build ## Build and serve the complete multilingual site
 	@if python -c "import socket; s = socket.socket(); s.bind(('0.0.0.0', 8000)); s.close()" 2>/dev/null; then \
 		cd dist && python -m http.server 8000 > /dev/null 2>&1 & \
 		echo "Server started at http://localhost:8000"; \
-		echo "Spanish version: http://localhost:8000/"; \
+		echo "Spanish version: http://localhost:8000/es/"; \
 		echo "English version: http://localhost:8000/en/"; \
 		echo ""; \
 		echo "Use 'make down' to stop the server"; \
