@@ -21,7 +21,7 @@ description: "Oportunidades para apoyar a la comunidad de inteligencia artificia
         <p data-rosey="volunteer-form-text">
           Comparte tus intereses y disponibilidad en nuestro formulario general para coordinar oportunidades de voluntariado, alianzas y patrocinios.
         </p>
-        <a class="lang-toggle" style="display: inline-block; margin-top: var(--space-md);" target="_blank" rel="noopener" href="https://docs.google.com/forms/d/e/1FAIpQLSdEjJw-QPT6D3g3tm65KI3ai9eDaA_z8oiK1qqYrFXTUla1FQ/viewform?usp=dialog" data-rosey="volunteer-form-button">
+        <a class="cta-button" style="margin-top: var(--space-md);" target="_blank" rel="noopener" href="https://docs.google.com/forms/d/e/1FAIpQLSdEjJw-QPT6D3g3tm65KI3ai9eDaA_z8oiK1qqYrFXTUla1FQ/viewform?usp=dialog" data-rosey="volunteer-form-button">
           Abrir formulario general
         </a>
         <p style="margin-top: var(--space-lg);" data-rosey="volunteer-speaker-note">
