@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script>
+    (function() {
+      var base = 'https://lu.ma/ai-cdmx';
+      var params = new URLSearchParams(window.location.search);
+      var dest = base;
+      if (params.toString()) {
+        dest += '?' + params.toString();
+      }
+      window.location.replace(dest);
+    })();
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=https://lu.ma/ai-cdmx">
+  </noscript>
+</head>
+<body>
+  <p>Redirecting to events calendar...</p>
+</body>
+</html>
