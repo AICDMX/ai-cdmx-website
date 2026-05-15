@@ -25,3 +25,6 @@ build/
 public/
 rosey/base.json
 rosey/base.urls.json
+
+# Claude Code local settings
+.claude/
